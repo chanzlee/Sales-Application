@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.peopleComboBox = new System.Windows.Forms.ComboBox();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.regionComboBox = new System.Windows.Forms.ComboBox();
             this.salesRegionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.refreshSalesbutton = new System.Windows.Forms.Button();
             this.salesDataGridView = new System.Windows.Forms.DataGridView();
-            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updatedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesTargetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
@@ -82,12 +83,13 @@
             // 
             // refreshSalesbutton
             // 
-            this.refreshSalesbutton.Location = new System.Drawing.Point(376, 22);
+            this.refreshSalesbutton.Location = new System.Drawing.Point(376, 21);
             this.refreshSalesbutton.Name = "refreshSalesbutton";
-            this.refreshSalesbutton.Size = new System.Drawing.Size(70, 19);
+            this.refreshSalesbutton.Size = new System.Drawing.Size(70, 20);
             this.refreshSalesbutton.TabIndex = 2;
             this.refreshSalesbutton.Text = "Refresh";
             this.refreshSalesbutton.UseVisualStyleBackColor = true;
+            this.refreshSalesbutton.Click += new System.EventHandler(this.refreshSalesbutton_Click);
             // 
             // salesDataGridView
             // 
@@ -108,16 +110,12 @@
             this.salesDataGridView.TabIndex = 3;
             this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // saleBindingSource
-            // 
-            this.saleBindingSource.DataSource = typeof(SalesApp.Models.Sale);
-            // 
             // amountDataGridViewTextBoxColumn
             // 
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             this.amountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -125,9 +123,9 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.ReadOnly = true;
@@ -139,11 +137,26 @@
             this.updatedByDataGridViewTextBoxColumn.Name = "updatedByDataGridViewTextBoxColumn";
             this.updatedByDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // saleBindingSource
+            // 
+            this.saleBindingSource.DataSource = typeof(SalesApp.Models.Sale);
+            // 
+            // salesTargetButton
+            // 
+            this.salesTargetButton.Location = new System.Drawing.Point(83, 21);
+            this.salesTargetButton.Name = "salesTargetButton";
+            this.salesTargetButton.Size = new System.Drawing.Size(57, 20);
+            this.salesTargetButton.TabIndex = 4;
+            this.salesTargetButton.Text = "Target";
+            this.salesTargetButton.UseVisualStyleBackColor = true;
+            this.salesTargetButton.Click += new System.EventHandler(this.salesTargetButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 312);
+            this.Controls.Add(this.salesTargetButton);
             this.Controls.Add(this.salesDataGridView);
             this.Controls.Add(this.refreshSalesbutton);
             this.Controls.Add(this.regionComboBox);
@@ -171,6 +184,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedByDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource saleBindingSource;
+        private System.Windows.Forms.Button salesTargetButton;
     }
 }
 

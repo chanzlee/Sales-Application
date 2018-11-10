@@ -52,5 +52,35 @@ namespace SalesApp
         {
 
         }
+
+        private void refreshSalesbutton_Click(object sender, EventArgs e)
+        {
+            var personId = (int)peopleComboBox.SelectedValue;
+            var regionId = (int)regionComboBox.SelectedValue;
+
+            using (var context = new SalesContext())
+            {
+                saleBindingSource.DataSource = context.Sales
+                    .Where(s => s.PersonId == personId &&
+                                s.RegionId == regionId)
+                    .OrderBy(s => s.Date)
+                    .ToList();
+            }
+        }
+
+        private void salesTargetButton_Click(object sender, EventArgs e)
+        {
+            var personId = (int) peopleComboBox.SelectedValue;
+            using (var context = new SalesContext())
+            {
+                var person = context.People.SingleOrDefault(p => p.Id == personId);
+
+                if (person != null)
+                {
+                    MessageBox.Show(string.Format("{0} has a sales target of {1:C}",
+                        person.Fullname, person.SalesTarget));
+                }
+            }
+        }
     }
 }
