@@ -29,12 +29,148 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.peopleComboBox = new System.Windows.Forms.ComboBox();
+            this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.regionComboBox = new System.Windows.Forms.ComboBox();
+            this.salesRegionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.refreshSalesbutton = new System.Windows.Forms.Button();
+            this.salesDataGridView = new System.Windows.Forms.DataGridView();
+            this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updatedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // peopleComboBox
+            // 
+            this.peopleComboBox.DataSource = this.salesPersonBindingSource;
+            this.peopleComboBox.DisplayMember = "Fullname";
+            this.peopleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.peopleComboBox.FormattingEnabled = true;
+            this.peopleComboBox.Location = new System.Drawing.Point(146, 21);
+            this.peopleComboBox.Name = "peopleComboBox";
+            this.peopleComboBox.Size = new System.Drawing.Size(104, 20);
+            this.peopleComboBox.TabIndex = 0;
+            this.peopleComboBox.ValueMember = "Id";
+            this.peopleComboBox.SelectedIndexChanged += new System.EventHandler(this.peopleComboBox_SelectedIndexChanged);
+            // 
+            // salesPersonBindingSource
+            // 
+            this.salesPersonBindingSource.DataSource = typeof(SalesApp.Models.SalesPerson);
+            // 
+            // regionComboBox
+            // 
+            this.regionComboBox.DataSource = this.salesRegionBindingSource;
+            this.regionComboBox.DisplayMember = "Name";
+            this.regionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.regionComboBox.FormattingEnabled = true;
+            this.regionComboBox.Location = new System.Drawing.Point(256, 21);
+            this.regionComboBox.Name = "regionComboBox";
+            this.regionComboBox.Size = new System.Drawing.Size(104, 20);
+            this.regionComboBox.TabIndex = 1;
+            this.regionComboBox.ValueMember = "Id";
+            // 
+            // salesRegionBindingSource
+            // 
+            this.salesRegionBindingSource.DataSource = typeof(SalesApp.Models.SalesRegion);
+            // 
+            // refreshSalesbutton
+            // 
+            this.refreshSalesbutton.Location = new System.Drawing.Point(376, 22);
+            this.refreshSalesbutton.Name = "refreshSalesbutton";
+            this.refreshSalesbutton.Size = new System.Drawing.Size(70, 19);
+            this.refreshSalesbutton.TabIndex = 2;
+            this.refreshSalesbutton.Text = "Refresh";
+            this.refreshSalesbutton.UseVisualStyleBackColor = true;
+            // 
+            // salesDataGridView
+            // 
+            this.salesDataGridView.AllowUserToAddRows = false;
+            this.salesDataGridView.AllowUserToDeleteRows = false;
+            this.salesDataGridView.AutoGenerateColumns = false;
+            this.salesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.amountDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.updatedByDataGridViewTextBoxColumn});
+            this.salesDataGridView.DataSource = this.saleBindingSource;
+            this.salesDataGridView.Location = new System.Drawing.Point(12, 58);
+            this.salesDataGridView.Name = "salesDataGridView";
+            this.salesDataGridView.ReadOnly = true;
+            this.salesDataGridView.RowTemplate.Height = 23;
+            this.salesDataGridView.Size = new System.Drawing.Size(434, 242);
+            this.salesDataGridView.TabIndex = 3;
+            this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // saleBindingSource
+            // 
+            this.saleBindingSource.DataSource = typeof(SalesApp.Models.Sale);
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // updatedByDataGridViewTextBoxColumn
+            // 
+            this.updatedByDataGridViewTextBoxColumn.DataPropertyName = "UpdatedBy";
+            this.updatedByDataGridViewTextBoxColumn.HeaderText = "Updated By";
+            this.updatedByDataGridViewTextBoxColumn.Name = "updatedByDataGridViewTextBoxColumn";
+            this.updatedByDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(458, 312);
+            this.Controls.Add(this.salesDataGridView);
+            this.Controls.Add(this.refreshSalesbutton);
+            this.Controls.Add(this.regionComboBox);
+            this.Controls.Add(this.peopleComboBox);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox peopleComboBox;
+        private System.Windows.Forms.BindingSource salesPersonBindingSource;
+        private System.Windows.Forms.ComboBox regionComboBox;
+        private System.Windows.Forms.BindingSource salesRegionBindingSource;
+        private System.Windows.Forms.Button refreshSalesbutton;
+        private System.Windows.Forms.DataGridView salesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn updatedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource saleBindingSource;
     }
 }
 
