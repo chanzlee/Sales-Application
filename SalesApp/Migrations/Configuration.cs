@@ -1,5 +1,6 @@
 namespace SalesApp.Migrations
 {
+    using SalesApp.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -19,13 +20,35 @@ namespace SalesApp.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Regions.AddOrUpdate(
+                p => p.Id,
+                new SalesRegion {
+                    Active = true,
+                    Code="NTH",
+                    CreatedBy= "Admin",
+                    CreatedDate= DateTime.Now,
+                    Id=1,
+                    Name="North Region",
+                    SalesTarget = 10000.00M,
+                    UpdatedBy = "Admin",
+                    UpdatedDate = DateTime.Now
+                },
+
+                new SalesRegion
+                {
+                    Active = true,
+                    Code = "STH",
+                    CreatedBy = "Admin",
+                    CreatedDate = DateTime.Now,
+                    Id = 2,
+                    Name = "South Region",
+                    SalesTarget = 10000.00M,
+                    UpdatedBy = "Admin",
+                    UpdatedDate = DateTime.Now
+                }
+
+            );
+
         }
     }
 }
