@@ -18,13 +18,13 @@ namespace SalesApp.Models
         public string CreatedBy { get; set; }
 
         [Required]
-        public DateTime CreateDate { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         [Required]
         [StringLength(100)]
         public string UpdatedBy { get; set; }
 
         [Required]
-        public DateTime UpdateDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }
