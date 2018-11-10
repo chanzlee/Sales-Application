@@ -53,12 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\SalesContext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IActive.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\ObservableListSource.cs" />
+    <Compile Include="Models\Sale.cs" />
+    <Compile Include="Models\SalesPerson.cs" />
+    <Compile Include="Models\SalesRegion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

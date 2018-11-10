@@ -19,7 +19,7 @@ namespace SalesApp.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder  );
 
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
@@ -72,7 +72,7 @@ namespace SalesApp.Data
                 updatedEntity.UpdatedBy = Environment.UserName;
             }
 
-            return base.SaveChanges();
+            return base.SaveChanges(); 
         }
     }
 }
