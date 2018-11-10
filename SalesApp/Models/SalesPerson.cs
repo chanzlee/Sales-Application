@@ -20,5 +20,14 @@ namespace SalesApp.Models
         [Required]
         [StringLength(100)]
         public string LastName { get; set; }
+        
+        public virtual SalesRegion Region { get; set; }
+
+        [Required]
+        public int RegionId { get; set; }
+
+        public virtual ObservableListSource<Sale> Sales { get; set; }
+
+
     }
 }
