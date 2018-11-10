@@ -13,3 +13,4 @@ C:\Users\Chan\Desktop\SalesApp\SalesApp\obj\Debug\SalesApp.csproj.CopyComplete
 C:\Users\Chan\Desktop\SalesApp\SalesApp\obj\Debug\SalesApp.exe
 C:\Users\Chan\Desktop\SalesApp\SalesApp\obj\Debug\SalesApp.pdb
 C:\Users\Chan\Desktop\SalesApp\SalesApp\obj\Debug\SalesApp.Migrations.Initial.resources
+C:\Users\Chan\Desktop\SalesApp\SalesApp\obj\Debug\SalesApp.Migrations.SalesTargets.resources

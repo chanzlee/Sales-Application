@@ -25,7 +25,9 @@ namespace SalesApp.Models
 
         public virtual ObservableListSource<Sale> Sales { get; set; }
 
-
+        [Required]
+        [Range(0, double.MaxValue)]
+        public decimal SalesTarget { get; set; }
     }
 
 }
