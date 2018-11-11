@@ -125,5 +125,29 @@ namespace SalesApp
                 GetSales();
             };
         }
+
+        private void salesDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex ==1)
+            {
+                var salesId = (int)salesDataGridView.Rows[e.RowIndex].Cells[0].Value;
+                var amount = (decimal)salesDataGridView.Rows[e.RowIndex].Cells[1].Value;
+
+                using (var context = new SalesContext())
+                {
+                    var sale = context.Sales.SingleOrDefault(p => p.Id == salesId);
+
+                    if (sale != null)
+                    {
+                        sale.Amount = amount;
+                        var result = context.SaveChanges();
+
+                        MessageBox.Show(string.Format("{0} sales updated", result));
+                        GetSales();
+                    }
+                }
+
+            }
+        }
     }
 }
