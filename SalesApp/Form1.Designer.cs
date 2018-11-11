@@ -42,10 +42,16 @@
             this.updatedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.salesTargetButton = new System.Windows.Forms.Button();
+            this.newAmountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.newDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.newPersonComboBox = new System.Windows.Forms.ComboBox();
+            this.newRegionComboBox = new System.Windows.Forms.ComboBox();
+            this.newSaleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newAmountNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // peopleComboBox
@@ -151,11 +157,70 @@
             this.salesTargetButton.UseVisualStyleBackColor = true;
             this.salesTargetButton.Click += new System.EventHandler(this.salesTargetButton_Click);
             // 
+            // newAmountNumericUpDown
+            // 
+            this.newAmountNumericUpDown.DecimalPlaces = 2;
+            this.newAmountNumericUpDown.Location = new System.Drawing.Point(83, 325);
+            this.newAmountNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.newAmountNumericUpDown.Name = "newAmountNumericUpDown";
+            this.newAmountNumericUpDown.Size = new System.Drawing.Size(120, 21);
+            this.newAmountNumericUpDown.TabIndex = 5;
+            // 
+            // newDateDateTimePicker
+            // 
+            this.newDateDateTimePicker.Location = new System.Drawing.Point(83, 352);
+            this.newDateDateTimePicker.Name = "newDateDateTimePicker";
+            this.newDateDateTimePicker.Size = new System.Drawing.Size(200, 21);
+            this.newDateDateTimePicker.TabIndex = 6;
+            // 
+            // newPersonComboBox
+            // 
+            this.newPersonComboBox.DataSource = this.salesPersonBindingSource;
+            this.newPersonComboBox.DisplayMember = "Fullname";
+            this.newPersonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.newPersonComboBox.FormattingEnabled = true;
+            this.newPersonComboBox.Location = new System.Drawing.Point(83, 379);
+            this.newPersonComboBox.Name = "newPersonComboBox";
+            this.newPersonComboBox.Size = new System.Drawing.Size(104, 20);
+            this.newPersonComboBox.TabIndex = 7;
+            this.newPersonComboBox.ValueMember = "Id";
+            // 
+            // newRegionComboBox
+            // 
+            this.newRegionComboBox.DataSource = this.salesRegionBindingSource;
+            this.newRegionComboBox.DisplayMember = "Name";
+            this.newRegionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.newRegionComboBox.FormattingEnabled = true;
+            this.newRegionComboBox.Location = new System.Drawing.Point(193, 379);
+            this.newRegionComboBox.Name = "newRegionComboBox";
+            this.newRegionComboBox.Size = new System.Drawing.Size(104, 20);
+            this.newRegionComboBox.TabIndex = 8;
+            this.newRegionComboBox.ValueMember = "Id";
+            // 
+            // newSaleButton
+            // 
+            this.newSaleButton.Location = new System.Drawing.Point(303, 376);
+            this.newSaleButton.Name = "newSaleButton";
+            this.newSaleButton.Size = new System.Drawing.Size(75, 23);
+            this.newSaleButton.TabIndex = 9;
+            this.newSaleButton.Text = "New Sale";
+            this.newSaleButton.UseVisualStyleBackColor = true;
+            this.newSaleButton.Click += new System.EventHandler(this.newSaleButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 312);
+            this.ClientSize = new System.Drawing.Size(459, 450);
+            this.Controls.Add(this.newSaleButton);
+            this.Controls.Add(this.newRegionComboBox);
+            this.Controls.Add(this.newPersonComboBox);
+            this.Controls.Add(this.newDateDateTimePicker);
+            this.Controls.Add(this.newAmountNumericUpDown);
             this.Controls.Add(this.salesTargetButton);
             this.Controls.Add(this.salesDataGridView);
             this.Controls.Add(this.refreshSalesbutton);
@@ -168,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newAmountNumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,6 +251,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedByDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource saleBindingSource;
         private System.Windows.Forms.Button salesTargetButton;
+        private System.Windows.Forms.NumericUpDown newAmountNumericUpDown;
+        private System.Windows.Forms.DateTimePicker newDateDateTimePicker;
+        private System.Windows.Forms.ComboBox newPersonComboBox;
+        private System.Windows.Forms.ComboBox newRegionComboBox;
+        private System.Windows.Forms.Button newSaleButton;
     }
 }
 

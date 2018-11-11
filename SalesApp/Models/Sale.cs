@@ -16,15 +16,11 @@ namespace SalesApp.Models
         [Required]
         public DateTime Date { get; set; }
 
-
-
-        [Required]
         public virtual SalesPerson Person { get; set; }
 
         [Required]
         public int PersonId { get; set; }
 
-        [Required]
         public virtual SalesRegion Region { get; set; }
 
         [Required]
