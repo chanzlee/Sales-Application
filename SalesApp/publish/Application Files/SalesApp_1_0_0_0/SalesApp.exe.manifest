@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SalesApp.exe" version="1.0.0.0" publicKeyToken="7933d0927b8842e4" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SalesApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="SalesApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 매니페스트 옵션
+          Windows 사용자 계정 컨트롤 수준을 변경하려면 
+          requestedExecutionLevel 노드를 다음 중 하나로 바꾸세요.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면 
+         requestedExecutionLevel 노드를 삭제하세요.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5057184">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bAMvhzmoo8ZovNcgCAzdX34m1XrKhBmTpnrRkvwmIcQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="580768">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dd5shSPlEP/4L9cOPXFYKnpKMqiPf2uv0Mzd4DGAztM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalesApp.exe" size="48088">
+      <assemblyIdentity name="SalesApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dDcN/n7/a4x977+1z3fkJsCTWJQYdXInuSSM9mJO9dQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="SalesApp.exe.config" size="1256">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hXI8YFA24NabtoTGf4Xl1faNyQEBKAj+bxWkZw73gv8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-7S3NKFH\Chan" issuerKeyHash="d8a2cd959a166601372b841cddd21a4903462211" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>g+GEXbpw5nnXDNeUvJyr4q9tBa14KvpvpYJoL94oytE=</DigestValue></Reference></SignedInfo><SignatureValue>jfUs4k06Bqtob161qwPcVfag6VL4fUEAuTm0026NripCtQix6mQMGKvyai6mGwywig6JUHFDzu4FG1BjSoa2wZFVezZ5nlnErV0xhb7L03kUIexf3jdZnPaEpyvzL7EfCg2Xg2q/nFK8OOTetpwANSDj7P5iF/8f7uZcZxnMINE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0JLnZx/LnPre/CVr49ztEu457Y7BuyI0PcuTSwSdqv81WOOPCDxsa9JWpaxMGCL6JbggN8vTiYwn+2kTT6SEmFqFthmh4FvamCW9i+us/DlAkj9QfcTt+NMPhfkA+a9LIUKl0QLOKcNioAZ2gi62bNNxrH883ZL5tQmq3bL77IU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d1ca28de2f6882a56ffa2a78ad056dafe2ab9cbc94d70cd779e670ba5d84e183" Description="" Url=""><as:assemblyIdentity name="SalesApp.exe" version="1.0.0.0" publicKeyToken="7933d0927b8842e4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-7S3NKFH\Chan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>JDdP2/HO6Dq59MY1L40ruy2xGZSVbNN0/ktJaq8gq4c=</DigestValue></Reference></SignedInfo><SignatureValue>OJm45sqOS4XYIQG1yhXrlUuARfnYWAx0CfbTbl0pZg0C+Q+u+5yvjpLer/s3og/SSbRVChSjJBjZrqUk68gpjamAniZce+qpth22z0vaMx/MszlaKTxO0VuSq2av47cYeaX4fVTCI4mZvQ4tgFDOeUsvtvPM0cK+r/cynxQnzcQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0JLnZx/LnPre/CVr49ztEu457Y7BuyI0PcuTSwSdqv81WOOPCDxsa9JWpaxMGCL6JbggN8vTiYwn+2kTT6SEmFqFthmh4FvamCW9i+us/DlAkj9QfcTt+NMPhfkA+a9LIUKl0QLOKcNioAZ2gi62bNNxrH883ZL5tQmq3bL77IU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQIb7/N2zUF5pFVBvdsQ5UnTANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtADcAUwAzAE4ASwBGAEgAXABDAGgAYQBuMB4XDTE4MTExMTE5NDEwMFoXDTE5MTExMjAxNDEwMFowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQA3AFMAMwBOAEsARgBIAFwAQwBoAGEAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA0JLnZx/LnPre/CVr49ztEu457Y7BuyI0PcuTSwSdqv81WOOPCDxsa9JWpaxMGCL6JbggN8vTiYwn+2kTT6SEmFqFthmh4FvamCW9i+us/DlAkj9QfcTt+NMPhfkA+a9LIUKl0QLOKcNioAZ2gi62bNNxrH883ZL5tQmq3bL77IUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQByAECp5Of0Pz2lgMLELp1xNZHu1yMYTw7kRV05/rl6FcXNOxDBVn6n6/d+49ORcKu8PX6d/6tcjj9cq2kZdI0zxNLR3L2NS57ULX5ojl/+JnRzRIwE1MAmagn8mN/RAA2SEabS8S/JLW8Yczt7zG+7UdBvFE6FCjdU6zu0ZiqH0g==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

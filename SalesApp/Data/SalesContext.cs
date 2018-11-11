@@ -13,6 +13,14 @@ namespace SalesApp.Data
 {
     class SalesContext : DbContext
     {
+        public SalesContext() : base("SalesContext")
+        {
+            //Database.SetInitializer<SalesContext>(new CreateDatabaseIfNotExists<SalesContext>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SalesContext, Migrations.Configuration>());
+            //Database.SetInitializer<SalesContext>(new DropCreateDatabaseIfModelChanges<SalesContext>());
+            //Database.SetInitializer<SalesContext>(new DropCreateDatabaseAlways<SalesContext>());
+        }
+
         public DbSet<Sale> Sales { get; set; }
         public DbSet<SalesPerson> People { get; set;}
         public DbSet<SalesRegion> Regions { get; set; }
