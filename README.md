@@ -7,7 +7,7 @@
 * Sales application to manage sales amount per salesperson / sales region. User can perform CRUD functionality linked to the grid view. App is built on Microsoft Form and Entity Framework 6.2, with local database linked by Microsoft SQL server express.
 
 # Layout
-[Screenshot](Sales-Application/screenshot.png)
+[Screenshot](/screenshot.png)
 * With Salesperson and Sales region data seeded, user can retrieve list of sales based on combinations of two variables by clicking refresh button.
 * User can edit directly on the data grid view, focusing out of the grid will confirm the editing. 
 * On the bottom, user can create new sale instance by setting Amount, Date, Salesperson and Sales region, then click New Sale button.
